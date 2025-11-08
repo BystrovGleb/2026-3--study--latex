@@ -1,0 +1,467 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{tabularx}
+%\usepackage[paperheight=8cm,paperwidth=8cm]{geometry}
+\usepackage{longtable}
+\usepackage{threeparttable}
+\usepackage{ragged2e}
+\usepackage[russian]{babel}
+\usepackage{caption}
+
+\captionsetup{labelfont=bf}
+
+\begin{document}
+
+\begin{tabular}{lll}
+Animal & Food & Size \\
+dog
+& meat & medium \\
+horse & hay & large \\
+frog & flies & small \\
+\end{tabular}
+
+\begin{tabular}{cl}
+Animal & Description \\
+dog    & The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. \\
+cat    & The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family. \\
+\end{tabular}
+
+\begin{tabular}{cp{9cm}}
+Animal & Description \\
+dog    & The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. \\
+cat    & The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family. \\
+\end{tabular}
+
+\begin{tabular}{*{3}{l}}
+  Animal & Food  & Size   \\
+  dog    & meat  & medium \\
+  horse  & hay   & large  \\
+  frog   & flies & small  \\
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  Animal & Food & Size   \\
+  \midrule
+  dog   & meat  & medium \\
+  horse & hay   & large  \\
+  frog  & flies & small  \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  Animal & Food & Size \\
+  \midrule
+  dog & meat & medium \\
+  \cmidrule{1-2}
+  horse & hay & large \\
+  \cmidrule{1-1}
+  \cmidrule{3-3}
+  frog & flies & small \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  Animal & Food & Size \\
+  \midrule
+  dog & meat & medium \\
+  \cmidrule{1-2}
+  horse & hay & large \\
+  \cmidrule(r){1-1}
+  \cmidrule(rl){2-2}
+  \cmidrule(l){3-3}
+  frog & flies & small \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{cp{9cm}}
+  \toprule
+  Animal & Description \\
+  \midrule
+  dog    & The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. \\
+  \addlinespace
+  cat    & The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family. \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  Animal & Food & Size \\
+  \midrule
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+  fuath & \multicolumn{2}{c}{unknown} \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  \multicolumn{1}{c}{Animal} & \multicolumn{1}{c}{Food} & \multicolumn{1}{c}{Size} \\
+  \midrule
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+  fuath & \multicolumn{2}{c}{unknown} \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+  \toprule
+  Group & Animal & Size \\
+  \midrule
+  herbivore & horse & large \\
+  & deer & medium \\
+  & rabbit & small \\
+  \addlinespace
+  carnivore & dog & medium \\
+  & cat & small \\
+  & lion & large \\
+  \addlinespace
+  omnivore & crow & small \\
+  & bear & large \\
+  & pig & medium \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{>{\itshape}l<{:} *{2}{l}}
+  \toprule
+  Animal & Food & Size \\
+  \midrule
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{>{\itshape}l<{:} *{2}{l}}
+  \toprule
+  \multicolumn{1}{l}{Animal} & Food & Size \\
+  \midrule
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}
+ Animal & Food & Size \\
+ dog & meat & medium \\
+ horse & hay & large \\
+ frog & flies & small \\
+\end{tabular}
+
+\begin{tabular}{l@{ : }l@{\hspace{2cm}}l}
+  Animal & Food & Size \\
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+\end{tabular}
+
+\begin{tabular}{l!{:}ll}
+  Animal & Food & Size \\
+  dog & meat & medium \\
+  horse & hay & large \\
+  frog & flies & small \\
+\end{tabular}
+
+\begin{tabular}{l|ll}
+ Animal & Food & Size \\[2pt]
+ dog & meat & medium \\
+ horse & hay & large \\
+ frog & flies & small \\
+\end{tabular}
+
+\begin{tabular}{@{} lll@{}} \toprule[2pt]
+  Animal & Food & Size \\ \midrule[1pt]
+  dog & meat & medium \\
+  \cmidrule[0.5pt](r{1pt}l{1cm}){1-2}
+  horse & hay & large \\
+  frog & flies & small \\ \bottomrule[2pt]
+\end{tabular}
+
+\begin{tabular}{SS}
+  \toprule
+  {Values} & {More Values} \\
+  \midrule
+  1    & 2.3456  \\
+  1.2  & 34.2345 \\
+  -2.3 & 90.473  \\
+  40   & 5642.5  \\
+  5.3  & 1.2e3   \\
+  0.2  & 1e4     \\
+  \bottomrule
+\end{tabular}
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+A & B\\
+C & D\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular*}{.5\textwidth}{@{\extracolsep{\fill}}cc@{}}
+\hline
+A & B\\
+C & D\\
+\hline
+\end{tabular*}
+\end{center}
+
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cc@{}}
+\hline
+A & B\\
+C & D\\
+\hline
+\end{tabular*}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lp{2cm}}
+\hline
+A & B B B B B B B B B B B B B B B B B B B B B B B B\\
+C & D D D D D D D\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{.5\textwidth}{lX}
+\hline
+A & B B B B B B B B B B B B B B B B B B B B B B B B\\
+C & D D D D D D D\\
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{lX}
+\hline
+A & B B B B B B B B B B B B B B B B B B B B B B B B\\
+C & D D D D D D D\\
+\hline
+\end{tabularx}
+\end{center}
+
+%\begin{longtable*}{cc}
+%\multicolumn{2}{c}{A Long Table}\\
+%Left Side & Right Side\\
+%\hline
+%\endhead
+%\hline
+%\endfoot
+%aa & bb\\
+%Entry & b\\
+%a & b\\
+%a & b\\
+%a & b\\
+%a & b\\
+%a & bbb\\
+%a & b\\
+% & b\\
+%a & b\\
+%a & b\\
+%a & b\\
+%a & b\\
+%a & b b b b b b\\
+%a & b b b b b\\
+%a & b b\\
+%A Wider Entry & b\\
+%\end{longtable*}
+
+
+\begin{table}
+\begin{threeparttable}
+\caption{An Example}
+\begin{tabular}{ll}
+An entry & 42\tnote{1}\\
+Another entry & 24\tnote{2}\\
+\end{tabular}
+\begin{tablenotes}
+\item [1] the first note.
+\item [2] the second note.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}
+\begin{tabular}[t]{lp{3cm}}
+One & A long text set in a narrow paragraph, with some more example text.\\
+Two & A different long text set in a narrow paragraph, with some more hard to hyphenate words.
+\end{tabular}%
+\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{3cm}}
+One & A long text set in a narrow paragraph, with some more example text.\\
+Two & A different long text set in a narrow paragraph, with some more hard to hyphenate words.
+\end{tabular}%
+\begin{tabular}[t]{l>{\RaggedRight}p{3cm}}
+One & A long text set in a narrow paragraph, with some more example text.\\
+Two & A different long text set in a narrow paragraph, with some more hard to hyphenate words.
+\end{tabular}
+
+\footnotesize
+\begin{tabular}[t]{lp{3cm}}
+One & A long text set in a narrow paragraph, with some more example text.\\
+Two & A different long text set in a narrow paragraph, with some more hard to hyphenate words.
+\end{tabular}
+\end{table}
+
+\begin{tabular}{lcc}
+  \toprule
+  Test & \begin{tabular}{@{}c@{}}A\\a\end{tabular} & \begin{tabular}{@{}c@{}}B\\b\end{tabular} \\
+  \midrule
+  Content & is & here \\
+  Content & is & here \\
+  Content & is & here \\
+  \bottomrule
+\end{tabular}
+
+\begin{tabular}{lcc}
+  \toprule
+  Test & \begin{tabular}[b]{@{}c@{}}A\\a\end{tabular} & \begin{tabular}[t]{@{}c@{}}B\\b\end{tabular} \\
+  \midrule
+  Content & is & here \\
+  Content & is & here \\
+  Content & is & here \\
+  \bottomrule
+\end{tabular}
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+Square& $x^2$\\
+\hline
+Cube& $x^3$\\
+\hline
+\end{tabular}
+\end{center}
+ \begin{center}
+\setlength\extrarowheight{2pt}
+\begin{tabular}{cc}
+\hline
+Square& $x^2$\\
+\hline
+Cube& $x^3$\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Упражнения по таблицам}
+
+\subsection*{1. Простой пример таблицы}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Животное & Еда & Размер \\
+\midrule
+Собака & мясо & средний \\
+Лошадь & сено & большой \\
+Лягушка & мухи & маленький \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{2. Выравнивания столбцов: \texttt{l}, \texttt{c}, \texttt{r}}
+\paragraph{(a) \texttt{lll} — всё по левому краю}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+A & B & C \\
+\midrule
+alpha & beta & gamma \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{(b) \texttt{ccc} — центр}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+A & B & C \\
+\midrule
+alpha & beta & gamma \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{(c) \texttt{rrr} — по правому краю}
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+A & B & C \\
+\midrule
+alpha & beta & gamma \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{3. Меньше элементов, чем столбцов}
+\paragraph{Корректный вариант 1: добавить пустую ячейку}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+A & B & C \\
+\midrule
+1 & 2 & {} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Корректный вариант 2: объединить оставшиеся столбцы}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+A & B & C \\
+\midrule
+1 & \multicolumn{2}{l}{третий столбец отсутствует} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{4. Больше элементов, чем столбцов}
+
+\paragraph{Корректный вариант: объединить две последние ячейки}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+A & B & C \\
+\midrule
+1 & 2 & \multicolumn{1}{l}{3 и 4 как текст} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Альтернатива: добавить столбец и заполнить}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+A & B & C & D \\
+\midrule
+1 & 2 & 3 & 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{5. Эксперименты с \texttt{\textbackslash multicolumn}}
+
+\paragraph{Объединение нескольких столбцов в ячейке}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\multicolumn{2}{c}{Левая часть} & \multicolumn{2}{c}{Правая часть} \\
+\midrule
+L1 & L2 & R1 & R2 \\
+\multicolumn{2}{l}{Итого слева} & \multicolumn{2}{r}{Итого справа} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}
