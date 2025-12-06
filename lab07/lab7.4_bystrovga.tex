@@ -1,0 +1,65 @@
+\documentclass[24pt, a0paper, portrait]{tikzposter}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{xcolor}
+
+\definecolor{MyPink}{RGB}{194, 19, 182}
+
+\usetheme{Basic}
+
+\title{Look I'm making a poster}
+\author{Ostap S. Bender}
+\institute{RUDN University}
+
+\begin{document}
+\maketitle
+
+\begin{columns}
+\column{.33}
+Some text in the first column.
+
+\column{.33}
+Some text in the second column.
+
+\column{.33}
+Some text in the third column.
+\end{columns}
+
+\begin{columns}
+\column{.7}
+This is a wide column.
+
+\column{.3}
+This is a narrow column.
+\end{columns}
+
+\block{Introduction}{%
+  This is a sample content block. \vspace{1cm}
+}
+
+\note[
+  targetoffsetx=2cm,
+  targetoffsety=0cm,
+  width=6cm
+]{This is a note attached to the block.}
+
+%\begin{center}
+%\includegraphics[width=0.5\textwidth]{instituteLogo.png}
+%\captionof{figure}{Insert your caption here}
+%\end{center}
+
+%\begin{center}
+%\begin{tikzpicture}
+%\draw (0,0) circle (2cm);
+%\end{tikzpicture}
+%\captionof{figure}{A simple TikZ example}
+%\end{center}
+
+Here follows regular text.
+\color{MyPink} Now the text is pink,
+\color{black} and now it is back to normal.
+
+\end{document}
+
